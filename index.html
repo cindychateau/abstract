@@ -14,17 +14,20 @@
     <div class="layout">
         <header>
             <div class="help-center">
-                <h1>Abstract | <span class="no-bold">Help Center</span></h1>
+                <h1>Abstract | <span id="help-text" class="no-bold" onclick="switchClasses()">Help Center</span></h1>
             </div>
             <div class="buttons">
                 <button id="submit" onclick="submitAlert()">Submit Request</button>
-                <button id="sign-in">Sign In</button>
+                <button id="sign-in" onclick="changeH2()">Sign In</button>
             </div>
         </header>
         <main>
             <div class="help">
                 <h2>How can we help?</h2>
-                <input id="search" type="text" placeholder="Search" >
+                <input id="search" type="text" placeholder="Search" onchange="searching(this)">
+                <p>
+                    You're looking for: <span id="looking-for"></span>
+                </p>
             </div>
             <div class="categories">
                 <div class="row">
